@@ -1,42 +1,37 @@
 package xyz.satdg.sao.supergatemod;
 
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import sun.security.ec.SunEC;
+import xyz.satdg.sao.supergatemod.client.ClientProxy;
 
 /**
+ * the main class of mod
  * @author GongSunink
  */
-@Mod(name = SuperGate.MODNAME,modid = SuperGate.MODID,version = SuperGate.VERSION)
+@Mod(name = SuperGate.MODNAME,modid = SuperGate.MODID,version =
+        SuperGate.VERSION)
 public class SuperGate {
 
     public static final String MODNAME = "SuperGate";
-    public static final String MODID = "SuperGate";
+    public static final String MODID = "supergate";
     public static final String VERSION = "1.0bate";
 
-    private static SuperGate instance;
+    @Mod.Instance(owner = SuperGate.MODID)
+    public SuperGate intance;
 
-
-    @Mod.InstanceFactory
-    public static SuperGate getInstance(){
-        return instance;
-    }
-
+    @SidedProxy()
+    ClientProxy clientProxy;
 
     @Mod.EventHandler
     public void perInit(FMLPreInitializationEvent event){
-
     }
 
     @Mod.EventHandler
-    public void init (FMLInitializationEvent event){
-
-    }
+    public void init (FMLInitializationEvent event){ }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event){
-
-    }
+    public void postInit(FMLPostInitializationEvent event){}
 }

@@ -1,0 +1,10 @@
+[{
+  "modid": "supergate",
+  "name": "SuperGate",
+  "description": "NO_DESCRIPTION",
+  "version": "1.0bate",
+  "mcversion": "1.12.2",
+  "logoFile": "assets/supergate/textures/logo.png",
+  "url": "www.supergate.mod",
+  "authorList": ["Tamaki Ui"],
+}]
