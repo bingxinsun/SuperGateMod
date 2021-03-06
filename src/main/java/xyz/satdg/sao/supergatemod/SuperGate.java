@@ -27,10 +27,13 @@ public class SuperGate {
 
     @Mod.EventHandler
     public void perInit(FMLPreInitializationEvent event){
+        clientProxy.clientPreinit(event);
     }
 
     @Mod.EventHandler
-    public void init (FMLInitializationEvent event){ }
+    public void init (FMLInitializationEvent event){
+        clientProxy.clientInit(event);
+    }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){}
